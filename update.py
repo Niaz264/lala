@@ -46,7 +46,7 @@ load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://github.com/junedkh/jmdkh-mltb'
+    UPSTREAM_REPO = 'https://github.com/Niaz264/lala'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
@@ -56,8 +56,8 @@ if ospath.exists('.git'):
     srun(["rm", "-rf", ".git"])
 
 update = srun([f"git init -q \
-                    && git config --global user.email kjuned007@gmail.com \
-                    && git config --global user.name junedkh \
+                    && git config --global user.email niaznafis265@gmail.com \
+                    && git config --global user.name Niaz264 \
                     && git add . \
                     && git commit -sm update -q \
                     && git remote add origin {UPSTREAM_REPO} \
